@@ -1,51 +1,75 @@
-# Project 2 - Tweet
-**Tweet** is an android app that allows a user to view his Twitter timeline and post a new tweet. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
+# SimpleTweet
+SimpleTweet is an Android app using Java that allows a user to view their Twitter timeline and post a new tweet. The app utilizes the [Twitter API](https://dev.twitter.com/rest/public).
 
-Time spent: **5** hours spent in total
+## Table of Contents
+- [Description](#description)
+- [Demo](#demo)
+- [Installation](#installation)
+- [Dependencies](#dependencies)
+- [License](#license)
 
-## User Stories
+### Description
 
-The following **required** functionality is completed:
+Some of the main features include:
 
-- [ ] User can **compose and post a new tweet**
+
+- [x] User can sign in to Twitter using OAuth login
+- [x]	User can view tweets from their home timeline
+  - [x] User is displayed the username, name, and body for each tweet
+  - [x] User is displayed the [relative timestamp](https://gist.github.com/nesquena/f786232f5ef72f6e10a7) for each tweet "8m", "7h"
+- [x] User can refresh tweets timeline by pulling down to refresh
+- [x] User can view more tweets as they scroll with infinite pagination
+- [x] User can click links in tweets and launch the link in the web browser
+- [x] User can **compose and post a new tweet**
   - [x] User can click a “Compose” icon in the Action Bar on the top right
   - [x] User can then enter a new tweet and post this to twitter
-  - [ ] User is taken back to home timeline with **new tweet visible** in timeline
-  - [ ] Newly created tweet should be manually inserted into the timeline and not rely on a full refresh
-  - [ ] User can **see a counter with total number of characters left for tweet** on compose tweet page
 
-The following **optional** features are implemented:
+### Demo
+#### Current Progress Walkthrough
 
-- [ ] User is using **"Twitter branded" colors and styles**
-- [x] User can click links in tweets launch the web browser 
-- [ ] User can **select "reply" from detail view to respond to a tweet**
-- [ ] The "Compose" action is moved to a FloatingActionButton instead of on the AppBar
-- [ ] Compose tweet functionality is build using modal overlay
-- [ ] Use Parcelable instead of Serializable using the popular [Parceler library](http://guides.codepath.org/android/Using-Parceler).
-- [ ] User can **open the twitter app offline and see last loaded tweets**. Persisted in SQLite tweets are refreshed on every application launch. While "live data" is displayed when app can get it from Twitter API, it is also saved for use in offline mode.
-- [ ] When a user leaves the compose view without publishing and there is existing text, prompt to save or delete the draft. If saved, the draft should then be **persisted to disk** and can later be resumed from the compose view.
-- [ ] Enable your app to receive implicit intents from other apps. When a link is shared from a web browser, it should pre-fill the text and title of the web page when composing a tweet. 
+<img src="https://github.com/kabirdhillon7/SimpleTweet/blob/master/Walkthrough%202.gif" width=250><br>
 
-The following **additional** features are implemented:
+#### Progress 1 Walkthrough
+<details>
+  <img src="https://github.com/kabirdhillon7/SimpleTweet/blob/master/Walkthrough.gif" width=250><br>
+</details>
 
-- [ ] List anything else that you can get done to improve the app functionality!
+## Installation
 
-## Video Walkthrough
+To install and set up the app on your own device, follow these steps:
 
-Here's a walkthrough of implemented user stories:
+### Prerequisites
+- Android Studio 4.0 or later
+- Android SDK and Emulator or physical Android device for testing
+- Java Development Kit (JDK) 8 or later installed and configured with Android Studio
+- Gradle 4.0 or later for building the project
 
-<img src='https://github.com/kabirdhillon7/SimpleTweet/blob/master/Walkthrough%202.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+### Cloning the repository
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+- Download and install the latest version of Android Studio.
+- Clone this repository to your local machine using the following command in your terminal:
+```
+git clone https://github.com/kabirdhillon7/SimpleTweet.git
+```
+- Open Android Studio and click on "Open an existing Android Studio project".
+- Navigate to the location where you cloned the repository, select the root folder of the project and click "OK".
+- Wait for Android Studio to build the project and all its dependencies.
+- Connect your Android device to your computer or use the Android emulator.
+- In Android Studio, click on the "Run" button or press Shift+F10 to launch the app on your device.
 
-## Notes
+## Dependencies
 
-Describe any challenges encountered while building the app.
-
-## Open-source libraries used
+This app uses the following dependencies:
 
 - [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
 - [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
+
+## Contact
+
+If you have any questions or feedback, you can reach me through the following channels:
+
+- GitHub: [@kabirdhillon7](https://github.com/kabirdhillon7)
+- LinkedIn: [Kabir Dhillon](https://www.linkedin.com/in/kabirdhillon/)
 
 ## License
 
@@ -63,62 +87,3 @@ Describe any challenges encountered while building the app.
     See the License for the specific language governing permissions and
     limitations under the License.
 
-**Tweet** is an android app that allows a user to view his Twitter timeline. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
-
-Time spent: **5.5** hours spent in total
-
-## User Stories
-
-The following **required** functionality is completed:
-
-- [x] User can **sign in to Twitter** using OAuth login
-- [x]	User can **view tweets from their home timeline**
-  - [x] User is displayed the username, name, and body for each tweet
-  - [x] User is displayed the [relative timestamp](https://gist.github.com/nesquena/f786232f5ef72f6e10a7) for each tweet "8m", "7h"
-- [x] User can refresh tweets timeline by pulling down to refresh
-
-The following **optional** features are implemented:
-
-- [x] User can view more tweets as they scroll with infinite pagination
-- [ ] Improve the user interface and theme the app to feel "twitter branded"
-- [x] Links in tweets are clickable and will launch the web browser
-- [ ] User can tap a tweet to display a "detailed" view of that tweet
-- [ ] User can see embedded image media within the tweet detail view
-- [ ] User can watch embedded video within the tweet
-- [ ] User can open the twitter app offline and see last loaded tweets
-- [ ] On the Twitter timeline, leverage the CoordinatorLayout to apply scrolling behavior that hides / shows the toolbar.
-
-The following **additional** features are implemented:
-
-- [ ] List anything else that you can get done to improve the app functionality!
-
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
-
-<img src='https://github.com/kabirdhillon7/SimpleTweet/blob/master/Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
-
-## Notes
-
-## Open-source libraries used
-
-- [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
-- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
-
-## License
-
-    Copyright 2021 Kabir Dhillon
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
